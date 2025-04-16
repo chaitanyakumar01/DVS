@@ -1,0 +1,267 @@
+/* Modern Color Scheme */
+:root {
+    --primary: #4361ee;
+    --primary-dark: #3a56d4;
+    --secondary: #7209b7;
+    --dark: #212529;
+    --light: #f8f9fa;
+    --gray: #6c757d;
+    --success: #4cc9f0;
+    --danger: #f72585;
+}
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f7fa;
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+.app-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Header Styles */
+.app-header {
+    padding: 1.5rem 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.logo i {
+    font-size: 2rem;
+    color: var(--primary);
+}
+
+.logo h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+.logo span {
+    color: var(--secondary);
+}
+
+/* Button Styles */
+button {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.wallet-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: var(--primary);
+    color: white;
+}
+
+.wallet-btn:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+.primary-btn {
+    padding: 0.75rem 1.5rem;
+    background: var(--primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+.primary-btn:hover {
+    background: var(--primary-dark);
+    box-shadow: 0 5px 15px rgba(67, 97, 238, 0.3);
+}
+
+/* Hero Section (Updated without image) */
+.hero-section {
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.hero-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    color: var(--gray);
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+/* Polls Section */
+.polls-section {
+    padding: 2rem 0 4rem;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.section-header h3 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.filter-options {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.filter-btn {
+    padding: 0.5rem 1rem;
+    background: white;
+    color: var(--gray);
+    border: 1px solid #e9ecef;
+}
+
+.filter-btn.active {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
+/* Poll Cards */
+.polls-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 1.5rem;
+}
+
+.poll-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.poll-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.poll-header {
+    padding: 1.5rem;
+    border-bottom: 1px solid #f1f3f5;
+}
+
+.poll-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.poll-desc {
+    color: var(--gray);
+    font-size: 0.9rem;
+}
+
+.poll-footer {
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.poll-status {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+}
+
+.poll-status.active {
+    color: var(--primary);
+}
+
+.poll-status.ended {
+    color: var(--gray);
+}
+
+.poll-status i {
+    font-size: 0.7rem;
+}
+
+.vote-btn {
+    padding: 0.5rem 1.25rem;
+    background: var(--primary);
+    color: white;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.vote-btn:hover {
+    background: var(--primary-dark);
+}
+
+.results-btn {
+    padding: 0.5rem 1.25rem;
+    background: var(--gray);
+    color: white;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .polls-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .hero-text h2 {
+        font-size: 2rem;
+    }
+}
